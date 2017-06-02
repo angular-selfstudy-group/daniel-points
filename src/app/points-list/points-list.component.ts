@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'pts-points-list',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./points-list.component.scss']
 })
 export class PointsListComponent implements OnInit {
+
+  @Input() list;
 
   constructor() { }
 

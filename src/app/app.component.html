@@ -1,7 +1,15 @@
 <main id="root">
     <pts-top-header></pts-top-header>
-    <pts-main-form></pts-main-form>
-    <pts-points-list></pts-points-list>
+
+    <pts-main-form 
+    [list]="todo.list"
+    (add)="onAdd(todo.list.length, $event)">
+    </pts-main-form>
+
+    <pts-points-list
+    [list]="todo.list">
+    </pts-points-list>
+
 </main>
 
 <router-outlet></router-outlet>

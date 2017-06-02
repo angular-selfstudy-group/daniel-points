@@ -1,3 +1,7 @@
 <ul>
-  <li>{{message}}</li>
+  <li
+  *ngFor="let item of list"
+  >{{item.text}}
+    <button class="button-error pure-button">Delete</button>
+  </li>
 </ul>

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { MainFormComponent } from './main-form/main-form.component';
 import { PointsListComponent } from './points-list/points-list.component';
+import { TodoListService } from "./services/todo-list.service";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { PointsListComponent } from './points-list/points-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{provide: 'todo', useClass:TodoListService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

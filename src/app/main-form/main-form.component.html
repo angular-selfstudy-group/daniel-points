@@ -1,5 +1,7 @@
-<form class="main-form pure-form">
-  <input #addInput type="text">
+<section class="main-form pure-form">
+  <input #addInput type="text"
+  [(ngModel)]="inputText"
+  >
   <button class="add-point pure-button pure-button-primary"
-    (click)="onClick(addInput.value)">Add On</button>
-</form>
+    (click)="clickHandler()">Add On</button>
+</section>

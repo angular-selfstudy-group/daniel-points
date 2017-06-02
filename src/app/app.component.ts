@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'pts-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pts';
+
+  onAdd(length, event) {
+    if (!event.text) return;
+    this.todo.add(length, event);
+  }
+
+  constructor(@Inject('todo') private todo){}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pts-main-form',
@@ -6,12 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-form.component.scss']
 })
 export class MainFormComponent implements OnInit {
+  inputText: string;
+  @Input() list;
+  @Output() add = new EventEmitter();
 
-  onClick(value) {
-    console.log(value);
+  clickHandler() {
+    this.add.emit({ text: this.inputText });
+    this.inputText = null;
   }
 
-  constructor() { }
+  constructor() {
+    this.inputText = "";
+  }
 
   ngOnInit() {
   }
