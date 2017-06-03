@@ -1,6 +1,6 @@
-#root {
-    display: block;
-    width: 40%;
-    margin: 2em auto;
-    font-family: 'Roboto', sans-serif;
+.todoapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

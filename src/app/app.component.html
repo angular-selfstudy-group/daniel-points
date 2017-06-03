@@ -1,15 +1,24 @@
-<main id="root">
-    <pts-top-header></pts-top-header>
+<md-toolbar color="primary">
+    Daniel's Material App
+</md-toolbar>
 
-    <pts-main-form 
-    [list]="todo.list"
-    (add)="onAdd(todo.list.length, $event)">
-    </pts-main-form>
+<md-card>
+    <section class="todoapp">
+        <pts-top-header
+            [newTodo]="newTodo"
+            (add)="addTodo()">
+        </pts-top-header>
 
-    <pts-points-list
-    [list]="todo.list">
-    </pts-points-list>
+        <pts-points-list
+            [todos]="todos" 
+            (toggleTodoComplete)="toggleTodoComplete($event)" 
+            (removeTodo)="removeTodo($event)">
+        </pts-points-list>
 
-</main>
+        <pts-footer
+            [todos]="todos">
+        </pts-footer>
 
+    </section>
+</md-card>
 <router-outlet></router-outlet>

@@ -1,7 +1,12 @@
-<ul>
-  <li
-  *ngFor="let item of list"
-  >{{item.text}}
-    <button class="button-error pure-button">Delete</button>
-  </li>
-</ul>
+<section class="main" *ngIf="todos.length > 0">
+    <ul class="todo-list">
+        <li *ngFor="let todo of todos" [class.completed]="todo.complete">
+            <div class="view">
+                <md-checkbox class="toggle" (click)="toggleTodoComplete.emit(todo)" [checked]="todo.complete">
+                    {{todo.title}}
+                </md-checkbox>
+                <button class="destroy" (click)="removeTodo.emit(todo)"></button>
+            </div>
+        </li>
+    </ul>
+</section>

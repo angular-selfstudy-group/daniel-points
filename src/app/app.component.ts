@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { Todo } from "app/todo";
 
 @Component({
   selector: 'pts-root',
@@ -6,11 +7,24 @@ import { Component, Inject } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
+  newTodo: Todo = new Todo();
+  constructor(@Inject("list") private list){}
 
-  onAdd(length, event) {
-    if (!event.text) return;
-    this.todo.add(length, event);
+  addTodo() {
+    this.list.addTodo(this.newTodo);
+    this.newTodo = new Todo();
   }
 
-  constructor(@Inject('todo') private todo){}
+  toggleTodoComplete(todo) {
+    this.list.toggleTodoComplete(todo);
+  }
+
+  removeTodo(todo) {
+    this.list.deleteTodoById(todo.id);
+  }
+
+  get todos() {
+    return this.list.getAllTodos();
+  }
 }

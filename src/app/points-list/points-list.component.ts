@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pts-points-list',
@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PointsListComponent implements OnInit {
 
-  @Input() list;
+  @Input() todos;
+  @Output() removeTodo = new EventEmitter();
+  @Output() toggleTodoComplete = new EventEmitter();
 
   constructor() { }
 

@@ -1,3 +1,7 @@
-<h1 class="top-header">
-  Points to-do!
-</h1>
+<header class="header">
+    <h1>Todos</h1>
+    <md-input-container>
+        <input mdInput class="new-todo" placeholder="What needs to be done?" autofocus=""
+        [(ngModel)]="newTodo.title" (keyup.enter)="add.emit()">
+    </md-input-container>        
+</header>
