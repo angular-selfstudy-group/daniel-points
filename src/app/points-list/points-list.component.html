@@ -5,7 +5,7 @@
                 <md-checkbox class="toggle" (click)="toggleTodoComplete.emit(todo)" [checked]="todo.complete">
                     {{todo.title}}
                 </md-checkbox>
-                <button class="destroy" (click)="removeTodo.emit(todo)"></button>
+                <button md-raised-button class="destroy" (click)="removeTodo.emit(todo)">Remove</button>
             </div>
         </li>
     </ul>

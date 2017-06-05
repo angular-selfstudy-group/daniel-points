@@ -4,21 +4,22 @@
 
 <md-card>
     <section class="todoapp">
-        <pts-top-header
-            [newTodo]="newTodo"
-            (add)="addTodo()">
-        </pts-top-header>
+        <md-card>
+            <pts-top-header
+                [newTodo]="newTodo"
+                (add)="addTodo()">
+            </pts-top-header>
 
-        <pts-points-list
-            [todos]="todos" 
-            (toggleTodoComplete)="toggleTodoComplete($event)" 
-            (removeTodo)="removeTodo($event)">
-        </pts-points-list>
+            <pts-points-list
+                [todos]="todos" 
+                (toggleTodoComplete)="toggleTodoComplete($event)" 
+                (removeTodo)="removeTodo($event)">
+            </pts-points-list>
 
-        <pts-footer
-            [todos]="todos">
-        </pts-footer>
-
+            <pts-footer
+                [todos]="todos">
+            </pts-footer>
+        </md-card>
     </section>
 </md-card>
 <router-outlet></router-outlet>
