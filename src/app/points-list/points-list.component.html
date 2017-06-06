@@ -2,7 +2,7 @@
     <ul class="todo-list">
         <li *ngFor="let todo of todos" [class.completed]="todo.complete">
             <div class="view">
-                <md-checkbox class="toggle" (click)="toggleTodoComplete.emit(todo)" [checked]="todo.complete">
+                <md-checkbox [(ngModel)]="todo.complete">
                     {{todo.title}}
                 </md-checkbox>
                 <button md-raised-button class="destroy" (click)="removeTodo.emit(todo)">Remove</button>

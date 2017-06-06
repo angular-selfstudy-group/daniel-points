@@ -9,7 +9,6 @@ export class PointsListComponent implements OnInit {
 
   @Input() todos;
   @Output() removeTodo = new EventEmitter();
-  @Output() toggleTodoComplete = new EventEmitter();
 
   constructor() { }
 

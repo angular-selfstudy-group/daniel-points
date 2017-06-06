@@ -16,10 +16,6 @@ export class AppComponent {
     this.newTodo = new Todo();
   }
 
-  toggleTodoComplete(todo) {
-    this.list.toggleTodoComplete(todo);
-  }
-
   removeTodo(todo) {
     this.list.deleteTodoById(todo.id);
   }

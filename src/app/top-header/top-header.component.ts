@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {MdTextareaAutosize} from '@angular/material';
 
 @Component({
   selector: 'pts-top-header',
