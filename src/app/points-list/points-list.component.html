@@ -5,7 +5,7 @@
                 <md-checkbox [(ngModel)]="todo.complete">
                     {{todo.title}}
                 </md-checkbox>
-                <button md-raised-button class="destroy" (click)="removeTodo.emit(todo)">Remove</button>
+                <button md-raised-button color="warn" class="destroy" (click)="removeTodo.emit(todo)">Remove</button>
             </div>
         </li>
     </ul>

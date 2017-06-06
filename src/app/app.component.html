@@ -2,23 +2,21 @@
     Daniel's Material App
 </md-toolbar>
 
-<md-card>
-    <section class="todoapp">
-        <md-card>
-            <pts-top-header
-                [newTodo]="newTodo"
-                (add)="addTodo()">
-            </pts-top-header>
+<section class="todoapp">
+    <md-card>
+        <pts-top-header
+            [newTodo]="newTodo"
+            (add)="addTodo()">
+        </pts-top-header>
 
-            <pts-points-list
-                [todos]="todos" 
-                (removeTodo)="removeTodo($event)">
-            </pts-points-list>
+        <pts-points-list
+            [todos]="todos" 
+            (removeTodo)="removeTodo($event)">
+        </pts-points-list>
 
-            <pts-footer
-                [todos]="todos">
-            </pts-footer>
-        </md-card>
-    </section>
-</md-card>
+        <pts-footer
+            [todos]="todos">
+        </pts-footer>
+    </md-card>
+</section>
 <router-outlet></router-outlet>
