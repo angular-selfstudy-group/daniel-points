@@ -7,7 +7,7 @@ import { Footer } from './footer/footer.component';
 import { PointsListComponent } from './points-list/points-list.component';
 import { TodoListService } from "./services/todo-list.service";
 import { FormsModule } from "@angular/forms";
-import {MaterialModule } from '@angular/material';
+import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import 'hammerjs';
 

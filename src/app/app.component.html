@@ -1,22 +1,38 @@
-<md-toolbar color="primary">
-    Daniel's Material App
-</md-toolbar>
+<md-sidenav-container [class.light-theme]="isLightTheme">
 
-<section class="todoapp">
-    <md-card>
-        <pts-top-header
-            [newTodo]="newTodo"
-            (add)="addTodo()">
-        </pts-top-header>
+    <md-sidenav #sidenav mode="side" class="app-sidenav">
+        <md-chip-list>
+            <md-chip color="accent" selected="true">Accent fish</md-chip>
+        </md-chip-list>
+    </md-sidenav>
 
-        <pts-points-list
-            [todos]="todos" 
-            (removeTodo)="removeTodo($event)">
-        </pts-points-list>
+    <md-toolbar color="primary">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+        <i class="material-icons app-toolbar-menu">menu</i>
+        </button>
 
-        <pts-footer
-            [todos]="todos">
-        </pts-footer>
-    </md-card>
-</section>
+        Angular Material2 Example App
+
+        <span class="app-toolbar-filler"></span>
+        <button md-button (click)="isLightTheme = !isLightTheme">TOGGLE LIGHT THEME</button>
+    </md-toolbar>
+
+    <section class="todoapp">
+        <md-card>
+            <pts-top-header
+                [newTodo]="newTodo"
+                (add)="addTodo()">
+            </pts-top-header>
+
+            <pts-points-list
+                [todos]="todos" 
+                (removeTodo)="removeTodo($event)">
+            </pts-points-list>
+
+            <pts-footer
+                [todos]="todos">
+            </pts-footer>
+        </md-card>
+    </section>
+</md-sidenav-container>
 <router-outlet></router-outlet>

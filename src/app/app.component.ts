@@ -7,7 +7,7 @@ import { Todo } from "app/todo";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+  isDarkTheme: boolean = false;
   newTodo: Todo = new Todo();
   constructor(@Inject("list") private list){}
 

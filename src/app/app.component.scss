@@ -1,3 +1,36 @@
+md-sidenav-container {
+    height: 100vh;
+    &.light-theme {
+        background: #fafafa;
+    }
+    md-sidenav {
+        font-family: Roboto,"Helvetica Neue",sans-serif;
+    }
+}
+
+.app-icon-button {
+    box-shadow: none;
+    user-select: none;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    filter: none;
+    font-weight: normal;
+    height: auto;
+    line-height: inherit;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    margin-right: 1em;
+}
+
+.app-toolbar-filler {
+    flex: 1 1 auto;
+}
 .todoapp {
     display: flex;
     align-items: center;
